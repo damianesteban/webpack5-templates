@@ -1,44 +1,21 @@
-const { mode } = require("webpack-nano/argv");
-const { merge } = require("webpack-merge");
-const parts = require("./webpack.parts");
-
-const cssLoaders = [parts.autoprefix(), parts.tailwind()];
-
-const commonConfig = merge([
-  {
-    entry: ["./src"],
+const path = require("path");
+module.exports = {
+  entry: "./src/index.ts",
+  devtool: "inline-source-map",
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
   },
-  parts.page({ title: "Webpack demo" }),
-  parts.loadImages({
-    options: {
-      limit: 15000,
-      name: "[name].[ext]"
-    }
-  })
-]);
-
-const productionConfig = merge([
-  parts.extractCSS({ loaders: cssLoaders }),
-  parts.eliminateUnusedCSS(),
-]);
-
-const developmentConfig = merge([
-  {
-    entry: ["webpack-plugin-serve/client"],
+  resolve: {
+    extensions: [".ts", ".js", ".tsx"],
   },
-  parts.devServer(),
-  parts.extractCSS({ options: { hmr: true }, loaders: cssLoaders }),
-]);
-
-const getConfig = (mode) => {
-  switch (mode) {
-    case "production":
-      return merge(commonConfig, productionConfig, { mode });
-    case "development":
-      return merge(commonConfig, developmentConfig, { mode });
-    default:
-      throw new Error(`Trying to use an unknown mode, ${mode}`);
-  }
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+  },
 };
-
-module.exports = getConfig(mode);

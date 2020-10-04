@@ -5,31 +5,29 @@
   "author": "Damian Esteban",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --watch webpack.* --exec \"wp --mode development\"",
+    "start": "webpack-dev-server --mode development",
     "build": "wp --mode production"
   },
   "devDependencies": {
+    "@types/node": "^14.11.2",
     "add": "^2.0.6",
-    "autoprefixer": "^10.0.1",
-    "mini-css-extract-plugin": "^0.11.2",
-    "mini-html-webpack-plugin": "^3.0.7",
+    "cache-loader": "^4.1.0",
+    "fork-ts-checker-webpack-plugin": "^5.2.0",
     "nodemon": "^2.0.4",
-    "postcss": "^8.1.1",
-    "postcss-loader": "^4.0.2",
+    "thread-loader": "^3.0.0",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
     "webpack": "^5.0.0-rc.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dashboard": "^3.2.1",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.4",
     "webpack-nano": "^1.0.0"
   },
   "dependencies": {
-    "css-loader": "^4.3.0",
     "file-loader": "^6.1.0",
     "glob": "^7.1.6",
     "most": "^1.8.1",
-    "purgecss-webpack-plugin": "^3.0.0",
-    "style-loader": "^1.2.1",
-    "tailwindcss": "^1.8.10",
-    "url-loader": "^4.1.0",
     "webpack-plugin-serve": "^1.0.1"
   }
 }
