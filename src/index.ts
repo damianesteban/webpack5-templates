@@ -1,6 +1,9 @@
-/** Getters and Setters Pyramid */
+import express from 'express';
+import { ap } from 'most';
 
-// Getters () => x
+const app = express();
 
-const thing = { name: 'Balls', age: 67 };
+app.listen(3000, () => {
+  console.log('Alive');
+})
 
