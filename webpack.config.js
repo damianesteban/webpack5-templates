@@ -1,4 +1,6 @@
 const path = require("path");
+const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
+
 module.exports = {
   entry: "./src/index.ts",
   devtool: "inline-source-map",
@@ -11,6 +13,9 @@ module.exports = {
       },
     ],
   },
+  plugins:[
+    new Serve()
+  ],
   resolve: {
     extensions: [".ts", ".js", ".tsx"],
   },

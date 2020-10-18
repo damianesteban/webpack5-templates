@@ -5044,10 +5044,10 @@ webpack-plugin-ramdisk@^0.1.2:
     chalk "^3.0.0"
     execa "^3.4.0"
 
-webpack-plugin-serve@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/webpack-plugin-serve/-/webpack-plugin-serve-1.0.1.tgz#ce28de439512bbf20aeeb4abc6678a59ec630ce3"
-  integrity sha512-Lbov1NhlX/FKQrVR4txjbycUKueqW/rpFvL9YN0nw56PfFBR0sX/KhpNPCUnJtN0Aa6LtzrrfGQvueBgODXR/A==
+webpack-plugin-serve@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/webpack-plugin-serve/-/webpack-plugin-serve-1.1.0.tgz#bbbc059d77e3accd2adc50c099f3aed186d957e3"
+  integrity sha512-f+XRxzqCr8JiR7W1mA7ymQte7sZcSpyr1yVBFSSW9z3ZL5gyTeZF9dGcoUUU4VLs3JRiVTa/PbjaeW8zwklpLw==
   dependencies:
     "@hapi/joi" "^15.1.0"
     chalk "^4.0.0"

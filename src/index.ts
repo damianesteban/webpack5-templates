@@ -2,5 +2,9 @@
 
 // Getters () => x
 
-const thing = { name: 'Balls', age: 67 };
+export function makeThing() {
+  return {
+    name:'THING'
+  }
+}
 

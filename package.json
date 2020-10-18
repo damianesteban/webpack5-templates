@@ -28,6 +28,6 @@
     "file-loader": "^6.1.0",
     "glob": "^7.1.6",
     "most": "^1.8.1",
-    "webpack-plugin-serve": "^1.0.1"
+    "webpack-plugin-serve": "^1.1.0"
   }
 }
