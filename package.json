@@ -1,33 +1,77 @@
 {
-  "name": "survivejs",
-  "version": "1.0.0",
+  "name": "@betterpt/",
+  "version": "0.0.0-development",
   "main": "index.js",
   "author": "Damian Esteban",
   "license": "MIT",
+  "private": true,
+  "files": [
+    "dist/**/*",
+    "CHANGELOG.md",
+    "package.json",
+    "package-lock.json"
+  ],
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "wp --mode production"
+    "start": "wp --mode development",
+    "build": "wp --mode production",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@types/node": "^14.11.2",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.1.1",
+    "@semantic-release/npm": "^7.0.6",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "@types/node": "^14.11.8",
     "add": "^2.0.6",
     "cache-loader": "^4.1.0",
+    "cz-conventional-changelog": "3.3.0",
     "fork-ts-checker-webpack-plugin": "^5.2.0",
     "nodemon": "^2.0.4",
+    "semantic-release": "^17.2.1",
     "thread-loader": "^3.0.0",
     "ts-loader": "^8.0.4",
     "typescript": "^4.0.3",
-    "webpack": "^5.0.0-rc.2",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.1.2",
+    "webpack-cli": "^4.0.0",
     "webpack-dashboard": "^3.2.1",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.4",
     "webpack-nano": "^1.0.0"
   },
   "dependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.12.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@types/react": "^16.9.52",
+    "@types/react-dom": "^16.9.8",
+    "cross-env": "^7.0.2",
+    "emotion-theming": "^10.0.27",
     "file-loader": "^6.1.0",
     "glob": "^7.1.6",
+    "html-webpack-plugin": "^4.5.0",
     "most": "^1.8.1",
-    "webpack-plugin-serve": "^1.0.1"
+    "polished": "^4.0.3",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "serve": "^11.3.2",
+    "styled-system": "^5.1.5",
+    "terser-webpack-plugin": "^5.0.0",
+    "webpack-plugin-serve": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damianesteban/webpack5-templates.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
